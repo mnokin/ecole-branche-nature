@@ -45,6 +45,7 @@ header {
         &-home {
             background-color: #75af00;
             background-image: url(../images/bg/bg-home.webp);
+
             .title span {
                 background-color: #75af0080;
             }
@@ -54,6 +55,7 @@ header {
         &-ecole-du-dehors {
             background-color: #0C3553;
             background-image: url(../images/bg/bg-dehors.webp);
+
             .title span {
                 background-color: #0C355380;
             }
@@ -62,6 +64,7 @@ header {
         &-outils-numeriques {
             background-color: #A70303;
             background-image: url(../images/bg/bg-outils.webp);
+
             .title span {
                 background-color: #A7030380;
             }
@@ -70,6 +73,7 @@ header {
         &-sequences-pedagogiques {
             background-color: #C21C32;
             background-image: url(../images/bg/bg-activites.webp);
+
             .title span {
                 background-color: #C21C3280;
             }
@@ -78,6 +82,7 @@ header {
         &-equipe {
             background-color: #685850;
             background-image: url(../images/bg/bg-equipe.webp);
+
             .title span {
                 background-color: #68585080;
             }
@@ -86,6 +91,7 @@ header {
         &-volet-reflexif {
             background-color: #C03D6A;
             background-image: url(../images/bg/bg-reflexif.webp);
+
             .title span {
                 background-color: #C03D6A80;
             }
@@ -94,6 +100,7 @@ header {
         &-ressources {
             background-image: url(../images/bg/bg-ressources.webp);
             background-color: #582A20;
+
             .title span {
                 background-color: #582A2080;
             }
@@ -156,18 +163,20 @@ footer {
         background-color: var(--dark);
         padding: var(--spacing);
         color: var(--secondary);
-
+        gap: 1rem;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
 
         @include media-breakpoint-down(lg) {
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(3, 1fr);
         }
 
+
         @include media-breakpoint-down(md) {
-            gap: 1rem;
             grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
         }
 
 
@@ -178,64 +187,80 @@ footer {
         }
 
         #flinks {
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 4;
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
 
-            @include media-breakpoint-down(xl) {
-                grid-column: 1 / span 3;
+            @include media-breakpoint-down(lg) {
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 2;
             }
 
             @include media-breakpoint-down(md) {
                 grid-column: 1 / span 4;
-                grid-row: 1 / span 3;
+                grid-row: 1 / span 2;
+            }
+        }
+
+        #legals {
+            grid-column: 4 / span 3;
+            grid-row: 1 / span 4;
+
+            @include media-breakpoint-down(lg) {
+                grid-column: 5 / span 4;
+                grid-row: 1 / span 1;
+            }
+
+            @include media-breakpoint-down(md) {
+                grid-column: 1 / span 4;
+                grid-row: 3 / span 2;
             }
         }
 
         #ccby {
-            grid-column: -4 / span 1;
-            grid-row: 1 / span 1;
+            grid-column: -3 / span 1;
+            grid-row: 2 / 2;
+            place-self: start;
 
-            @include media-breakpoint-down(xl) {
-                grid-column: -3 / span 1;
-                grid-row: 2 / 2;
+            @include media-breakpoint-down(lg) {
                 place-self: start;
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+                place-self: center;
             }
 
             @include media-breakpoint-down(md) {
                 grid-column: 1 / span 1;
-                grid-row: -2 / span 1;
-                place-self: center;
+                grid-row: 5 / span 1;
             }
         }
 
         #ucl {
-            grid-column: -3 / span 1;
-            grid-row: 1 / span 1;
+            grid-column: -3 / span 2;
+            grid-row: 1 / 1;
 
-            @include media-breakpoint-down(xl) {
-                grid-column: -3 / span 2;
-                grid-row: 1 / 1;
+            @include media-breakpoint-down(lg) {
+                grid-column: 3 / span 2;
+                grid-row: 3 / span 1;
             }
 
             @include media-breakpoint-down(md) {
                 grid-column: 2 / span 2;
-                grid-row: -2 / span 1;
+                grid-row: 5 / span 1;
             }
         }
 
         #aia {
             grid-column: -2 / span 1;
-            grid-row: 1 / 1;
+            grid-row: 2 / 2;
 
-            @include media-breakpoint-down(xl) {
-                grid-column: -2 / span 1;
-                grid-row: 2 / 2;
+            @include media-breakpoint-down(lg) {
+                grid-column: 5 / span 1;
+                grid-row: 3 / span 1;
             }
 
             @include media-breakpoint-down(md) {
                 grid-column: 4 / span 1;
-                grid-row: -2 / span 1;
-                place-self: center;
+                grid-row: 5 / span 1;
             }
 
             img {
@@ -341,6 +366,7 @@ main {
         h5 {
             font-weight: 700;
             margin-top: var(--spacing);
+
             span {
                 color: var(--primary);
             }
