@@ -10,6 +10,6 @@ npm install
 
 npm run build
 
-## Developement
+## Development
 
 npm run dev
