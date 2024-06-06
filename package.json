@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^2.0.1",
+    "rimraf": "^5.0.7",
+    "sass": "^1.76.0"
+  },
+  "name": "fopa-website-pi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf public",
+    "dev": "parcel ./src/index.html --out-dir public",
+    "build": "parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir public"
+  },
+  "staticFiles": [
+    {
+      "staticPath": "favicon.ico"
+    }
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
