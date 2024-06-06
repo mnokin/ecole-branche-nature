@@ -1,6 +1,6 @@
-# Ecole Branché Nature
+# Ecole Branchée Nature
 
-Site Ecole Branché Nature pour la FOPA
+Site Ecole Branchée Nature pour la FOPA
 
 ## Setup
 
